@@ -12,16 +12,11 @@ from schemas.compra import Compra
 from schemas.detalle_compra import DetalleCompra
 from schemas.carrito import Carrito
 from schemas.detalle_carrito import DetalleCarrito
-from routes.prov_r import provincia_bp
-from routes.local_r import localidad_bp
 
 app=Flask(__name__)
 app.config.from_object(Config)
 
 db.init_app(app)
-
-app.register_blueprint(provincia_bp, url_prefix='/api')
-app.register_blueprint(localidad_bp, url_prefix='/asd')
 
 with app.app_context():
     Base.metadata.create_all(bind=db.engine)
