@@ -1,8 +1,8 @@
 from sqlalchemy import Column, Integer, ForeignKey, DECIMAL
 from sqlalchemy.orm import relationship
 from db import Base
-from schemas.compra import Compra
-from schemas.producto import Producto
+from models.compra import Compra
+from models.producto import Producto
 
 class DetalleCompra(Base):
     __tablename__='detalle_compra'

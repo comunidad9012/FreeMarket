@@ -1,7 +1,7 @@
 from sqlalchemy import Column, Integer, String, ForeignKey
 from sqlalchemy.orm import relationship
 from db import Base
-from schemas.producto import Producto
+from models.producto import Producto
 
 class Imagen(Base):
     __tablename__='imagen'

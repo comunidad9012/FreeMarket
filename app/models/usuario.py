@@ -1,8 +1,9 @@
+from flask_login import UserMixin
 from sqlalchemy import Column, Integer, String, Date
 from sqlalchemy.orm import relationship
 from db import Base
 
-class Usuario(Base):
+class Usuario(Base, UserMixin):
     __tablename__='usuario'
 
     id_usuario=Column(Integer,primary_key=True,autoincrement=True)

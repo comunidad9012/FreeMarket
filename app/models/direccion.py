@@ -1,8 +1,8 @@
 from sqlalchemy import Column, Integer, String, ForeignKey
 from sqlalchemy.orm import relationship
 from db import Base
-from schemas.usuario import Usuario
-from schemas.localidad import Localidad
+from models.usuario import Usuario
+from models.localidad import Localidad
 
 class Direccion(Base):
     __tablename__='direccion'

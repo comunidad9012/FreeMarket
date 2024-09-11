@@ -1,8 +1,8 @@
 from sqlalchemy import Column, Integer, String, DECIMAL, DateTime, ForeignKey
 from sqlalchemy.orm import relationship
 from db import Base
-from schemas.usuario import Usuario
-from schemas.categoria import Categoria
+from models.usuario import Usuario
+from models.categoria import Categoria
 
 class Producto(Base):
     __tablename__='producto'

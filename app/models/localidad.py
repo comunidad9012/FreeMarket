@@ -1,7 +1,7 @@
 from sqlalchemy import Column, Integer, String, ForeignKey
 from sqlalchemy.orm import relationship
 from db import Base
-from schemas.provincia import Provincia
+from models.provincia import Provincia
 
 class Localidad(Base):
     __tablename__='localidad'

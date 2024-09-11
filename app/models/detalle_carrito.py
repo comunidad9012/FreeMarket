@@ -1,8 +1,8 @@
 from sqlalchemy import Column, Integer, ForeignKey, DECIMAL
 from sqlalchemy.orm import relationship
 from db import Base
-from schemas.carrito import Carrito
-from schemas.producto import Producto
+from models.carrito import Carrito
+from models.producto import Producto
 
 class DetalleCarrito(Base):
     __tablename__='detalle_carrito'

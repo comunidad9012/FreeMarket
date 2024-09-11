@@ -1,7 +1,7 @@
 from sqlalchemy import Column, Integer, DateTime, ForeignKey, Boolean
 from sqlalchemy.orm import relationship
 from db import Base
-from schemas.usuario import Usuario
+from models.usuario import Usuario
 
 class Carrito(Base):
     __tablename__='carrito'

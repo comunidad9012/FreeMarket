@@ -1,17 +1,7 @@
 from flask import Flask
 from config import Config
 from db import db, Base
-from schemas.provincia import Provincia
-from schemas.localidad import Localidad
-from schemas.categoria import Categoria
-from schemas.usuario import Usuario
-from schemas.direccion import Direccion
-from schemas.producto import Producto
-from schemas.imagen import Imagen
-from schemas.compra import Compra
-from schemas.detalle_compra import DetalleCompra
-from schemas.carrito import Carrito
-from schemas.detalle_carrito import DetalleCarrito
+from models import provincia,localidad,categoria,usuario,direccion,producto,imagen,compra,detalle_compra,detalle_carrito
 
 app=Flask(__name__)
 app.config.from_object(Config)

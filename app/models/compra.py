@@ -1,7 +1,7 @@
 from sqlalchemy import Column, Integer, DateTime, DECIMAL, ForeignKey
 from sqlalchemy.orm import relationship
 from db import Base
-from schemas.usuario import Usuario
+from models.usuario import Usuario
 
 class Compra(Base):
     __tablename__='compra'
