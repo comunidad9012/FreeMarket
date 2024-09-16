@@ -19,3 +19,6 @@ class Usuario(Base, UserMixin):
     productos=relationship('Producto',back_populates='vendedor')
     compras=relationship('Compra',back_populates='usuario')
     carritos=relationship('Carrito',back_populates='usuario')
+
+    def get_id(self):
+        return self.id_usuario
