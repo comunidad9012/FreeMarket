@@ -1,5 +1,6 @@
 from sqlalchemy import Column, Integer, String, DECIMAL, DateTime, ForeignKey
 from sqlalchemy.orm import relationship
+from datetime import datetime
 from db import Base
 from models.usuario import Usuario
 from models.categoria import Categoria
@@ -12,8 +13,8 @@ class Producto(Base):
     descripcion_producto=Column(String(250),nullable=False)
     precio_producto=Column(DECIMAL(15,0),nullable=False)
     stock_producto=Column(Integer,nullable=False)
-    fecha_carga_producto=Column(DateTime,nullable=False)
-    estado_producto=Column(Integer,nullable=False)
+    fecha_carga_producto=Column(DateTime,default=datetime.now,nullable=False)
+    estado_producto=Column(Integer,default=1,nullable=False)
     id_vendedor_producto=Column(Integer,ForeignKey('usuario.id_usuario'),nullable=False)
     id_categoria_producto=Column(Integer,ForeignKey('categoria.id_categoria'),nullable=False)
 
